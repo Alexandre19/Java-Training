@@ -2,8 +2,34 @@ package com.dojo.enumeration.domain;
 
 public class Client {
     private String name;
-    private String type;
-    public static final String PHYSICAL_PERSON = "PHYSICAL_PERSON";
-    public static final String LEGAL_PERSON = "LEGAL_PERSON";
+    private ClientType clientType;
 
+    public Client(String name, ClientType clientType) {
+        this.name = name;
+        this.clientType = clientType;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", clientType=" + clientType +
+                '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ClientType getClientType() {
+        return clientType;
+    }
+
+    public void setClientType(ClientType clientType) {
+        this.clientType = clientType;
+    }
 }
